@@ -17,6 +17,8 @@ java {
     withSourcesJar()
 }
 
+tasks.compileJava.get().options.encoding = "UTF-8"
+
 tasks.named("test") {
     enabled = false
 }
