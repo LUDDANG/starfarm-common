@@ -1,5 +1,6 @@
 package live.luya.starfarm.common.protocols;
 
+import live.luya.starfarm.common.protocols.packets.OpeningStoreMetaPacket;
 import live.luya.starfarm.common.protocols.packets.SyncHUDInfoPacket;
 
 import java.lang.reflect.Field;
@@ -7,6 +8,7 @@ import java.util.logging.Logger;
 
 public enum PacketRegistry {
     SYNC_HUD_INFO(SyncHUDInfoPacket.class, (byte) 0x01),
+    OPEN_STORE_INFO(OpeningStoreMetaPacket.class, (byte) 0x02),
     ;
 
     final byte packetId;
