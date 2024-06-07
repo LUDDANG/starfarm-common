@@ -35,7 +35,7 @@ public enum PacketRegistry {
 
     public static byte getPacketId(Class<? extends PacketFieldsDescriber> clazz) {
         for (PacketRegistry registry : values()) {
-            if (registry.clazz.equals(clazz)) {
+            if (registry.clazz.equals(clazz) || registry.clazz.isAssignableFrom(clazz)) {
                 byte id = getPacketIdInClass(clazz);
 
                 if (registry.packetId != id) {
