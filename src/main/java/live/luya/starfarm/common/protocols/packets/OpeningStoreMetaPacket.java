@@ -25,5 +25,8 @@ public abstract class OpeningStoreMetaPacket implements PacketFieldsDescriber {
 
         // 거래 금액 (판매 혹은 구매)
         public Integer balance;
+
+        // 인벤토리 내 보유 개수
+        public Integer count;
     }
 }
